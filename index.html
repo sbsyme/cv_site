@@ -5,15 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scott Syme | Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
-      theme: {
-        extend: {}
-      }
+      theme: { extend: {} }
     };
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
@@ -102,48 +100,169 @@
     </div>
 
     <!-- About Me with collapsible -->
-    <section x-data="{ open: true }" class="transition-all duration-300">
-      <h2 class="text-3xl font-bold border-b pb-2 mb-4 flex items-center justify-between cursor-pointer select-none"
-        @click="open = !open">
+    <section x-data="{ aboutLength: 'long' }" class="transition-all duration-300">
+      <h2 class="text-3xl font-bold border-b pb-2 mb-4 flex items-center gap-4">
         About Me
-        <svg :class="{'rotate-180': open}" class="h-5 w-5 ml-2 transition-transform duration-300" fill="none"
-          stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
+        <div class="flex gap-2 ml-auto">
+          <button
+            :class="aboutLength === 'short' ? 'bg-blue-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200'"
+            class="px-3 py-1 rounded-full text-sm font-medium transition" @click="aboutLength = 'short'">Short</button>
+          <button
+            :class="aboutLength === 'medium' ? 'bg-blue-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200'"
+            class="px-3 py-1 rounded-full text-sm font-medium transition"
+            @click="aboutLength = 'medium'">Medium</button>
+          <button
+            :class="aboutLength === 'long' ? 'bg-blue-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200'"
+            class="px-3 py-1 rounded-full text-sm font-medium transition" @click="aboutLength = 'long'">Long</button>
+        </div>
       </h2>
-      <div x-show="open" x-transition>
-        <p>
-          As an Engineer I at American Express, I apply my strong programming, problem solving, and analytical skills to
-          design, develop, and test software solutions for various business needs and challenges. I have nearly 5 years
-          of
-          experience in the industry, with a focus on Java, Object-Oriented Programming (OOP), and Behavior-Driven
-          Development (BDD) methodologies. I'm passionate about learning new tools and frameworks, and collaborating
-          with
-          other engineers and stakeholders to deliver high-quality products.
-        </p>
+      <div class="mt-4">
+        <template x-if="aboutLength === 'short'">
+          <p>
+            Software Engineer passionate about building robust, scalable systems with Java and modern cloud
+            technologies. Dedicated to continuous learning and improving both professionally and personally.
+          </p>
+        </template>
+        <template x-if="aboutLength === 'medium'">
+          <p>
+            I’m a Software Engineer with over five years of experience, primarily focused on backend development using
+            Java and Spring Boot. At American Express, I’ve worked on large-scale microservices and reactive systems,
+            delivering secure, maintainable solutions in a fast-paced environment. I’m a certified Java SE 11 Developer
+            and AWS Cloud Practitioner. Outside of work, I enjoy exploring new tools and technologies through side
+            projects and self-study, expanding my skill set beyond my day-to-day responsibilities.
+          </p>
+        </template>
+        <template x-if="aboutLength === 'long'">
+          <p>
+            I’m a Software Engineer at American Express with over five years of experience in backend development,
+            specialising in Java, Spring Boot, and microservices architecture. I’ve contributed to the modernisation of
+            core financial systems using reactive frameworks like WebFlux, and worked within agile DevOps teams where
+            I’ve led Scrum ceremonies, mentored junior engineers, and supported onboarding. I’ve also been involved in
+            graduate recruitment, conducting interviews and representing the company at university careers fairs. I hold
+            both Oracle Certified Java SE 11 Developer and AWS Cloud Practitioner certifications.
+            <br /><br />
+            I take pride in writing clean, maintainable code and enjoy fostering a culture of knowledge sharing and
+            growth within engineering teams. Outside of my day-to-day role, I regularly explore technologies I don’t
+            work with professionally—whether through personal projects, cloud infrastructure experimentation, or diving
+            into frontend frameworks like React and Next.js. I’m driven by curiosity and continuous improvement,
+            especially in areas like technology and economics, and I enjoy keeping up with developments at the
+            intersection of innovation, finance, and society.
+            <br /><br />
+            Outside of tech, I’m passionate about health and self-development. I follow a structured fitness routine
+            focused on weightlifting and nutrition, which plays a central role in my lifestyle. I’m also actively
+            studying Japanese—a journey I began over a year and a half ago and deepened after visiting Japan last
+            summer. 日本語を勉強しています。毎週レッスンを受けていて、空いている時間にはできるだけ日本語に触れるようにしています。 I dedicate time each week to tutoring and
+            immersive learning, and I find joy in steady, long-term progress—whether that’s learning a new programming
+            language or deciphering kanji.
+
+          </p>
+        </template>
       </div>
     </section>
 
-    <!-- Employment History with hover highlight -->
+    <!-- Employment History with hover highlight and icons -->
     <section>
       <h2 class="text-3xl font-bold border-b pb-2 mb-4">Employment History</h2>
       <div class="space-y-4">
-        <template x-for="(job, idx) in [
-          {title:'Engineer I — American Express', date:'May 2021 – Present', desc:'Design, develop, and test software solutions addressing complex business challenges, primarily using Java, OOP, and BDD methodologies.'},
-          {title:'Technology Graduate Engineer — American Express', date:'Sep 2019 – May 2021', desc:'Rotational engineering program working on diverse software engineering projects across the business.'},
-          {title:'Visitor Centre Assistant — Cream o\' Galloway', date:'Jun 2019 – Aug 2019', desc:'Provided customer support and operational assistance at a local food attraction.'},
-          {title:'Cabin Counsellor — Camp Highlander', date:'Jun 2018 – Aug 2018', desc:'Supervised and mentored a group of boys aged 10–13 through daily camp activities and routines.'},
-          {title:'Food and Beverage Assistant — Macdonald Hotels & Resorts', date:'Oct 2017 – Feb 2018', desc:'Served food and beverages at the Rocca Restaurant in St Andrews.'},
-          {title:'First Foundry Analyst (Intern) — American Express', date:'Jun 2017 – Aug 2017', desc:'Technology intern at American Express, working in a cross-functional team on engineering tasks.'},
-          {title:'Customer Service Assistant — Wilko', date:'Oct 2014 – Aug 2016', desc:'Assisted customers and managed retail duties at a local store.'}
-        ]" :key="idx">
-          <div
-            class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm">
-            <h3 class="text-xl font-semibold" x-text="job.title"></h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400" x-text="job.date"></p>
-            <p x-text="job.desc"></p>
+        <div
+          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+          <!-- American Express Icon -->
+          <svg class="h-8 w-8 text-blue-500 dark:text-blue-300 mt-1 flex-shrink-0" fill="currentColor"
+            viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="3" />
+            <text x="12" y="16" text-anchor="middle" font-size="8" fill="white" font-family="Arial">AMEX</text>
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold">Engineer I — American Express</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">May 2021 – Present</p>
+            <p>Design, develop, and test software solutions addressing complex business challenges, primarily using
+              Java, OOP, and BDD methodologies.</p>
           </div>
-        </template>
+        </div>
+        <div
+          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+          <!-- American Express Icon -->
+          <svg class="h-8 w-8 text-blue-500 dark:text-blue-300 mt-1 flex-shrink-0" fill="currentColor"
+            viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="3" />
+            <text x="12" y="16" text-anchor="middle" font-size="8" fill="white" font-family="Arial">AMEX</text>
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold">Technology Graduate Engineer — American Express</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Sep 2019 – May 2021</p>
+            <p>Rotational engineering program working on diverse software engineering projects across the business.</p>
+          </div>
+        </div>
+        <div
+          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+          <!-- Cream o' Galloway Icon -->
+          <svg class="h-8 w-8 text-yellow-600 dark:text-yellow-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" stroke-width="2" />
+            <path stroke-width="2" d="M8 15c1.333-2 6.667-2 8 0" />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold">Visitor Centre Assistant — Cream o' Galloway</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Jun 2019 – Aug 2019</p>
+            <p>Provided customer support and operational assistance at a local food attraction.</p>
+          </div>
+        </div>
+        <div
+          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+          <!-- Camp Icon -->
+          <svg class="h-8 w-8 text-green-700 dark:text-green-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-width="2" d="M3 17l9-13 9 13H3z" />
+            <rect x="9" y="17" width="6" height="4" rx="1" fill="currentColor" />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold">Cabin Counsellor — Camp Highlander</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Jun 2018 – Aug 2018</p>
+            <p>Supervised and mentored a group of boys aged 10–13 through daily camp activities and routines.</p>
+          </div>
+        </div>
+        <div
+          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+          <!-- Hotel Icon -->
+          <svg class="h-8 w-8 text-pink-600 dark:text-pink-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <rect x="4" y="8" width="16" height="10" rx="2" stroke-width="2" />
+            <rect x="9" y="12" width="6" height="6" rx="1" fill="currentColor" />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold">Food and Beverage Assistant — Macdonald Hotels & Resorts</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Oct 2017 – Feb 2018</p>
+            <p>Served food and beverages at the Rocca Restaurant in St Andrews.</p>
+          </div>
+        </div>
+        <div
+          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+          <!-- American Express Icon -->
+          <svg class="h-8 w-8 text-blue-500 dark:text-blue-300 mt-1 flex-shrink-0" fill="currentColor"
+            viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="3" />
+            <text x="12" y="16" text-anchor="middle" font-size="8" fill="white" font-family="Arial">AMEX</text>
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold">First Foundry Analyst (Intern) — American Express</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Jun 2017 – Aug 2017</p>
+            <p>Technology intern at American Express, working in a cross-functional team on engineering tasks.</p>
+          </div>
+        </div>
+        <div
+          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+          <!-- Retail Icon -->
+          <svg class="h-8 w-8 text-gray-500 dark:text-gray-300 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <rect x="4" y="7" width="16" height="10" rx="2" stroke-width="2" />
+            <path stroke-width="2" d="M9 17v2a1 1 0 001 1h4a1 1 0 001-1v-2" />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold">Customer Service Assistant — Wilko</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Oct 2014 – Aug 2016</p>
+            <p>Assisted customers and managed retail duties at a local store.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -240,14 +359,21 @@
     <section>
       <h2 class="text-3xl font-bold border-b pb-2 mb-4">Education</h2>
       <div class="space-y-4">
-        <div class="p-4 rounded-lg bg-white/60 dark:bg-gray-800/60 shadow-sm">
-          <h3 class="text-xl font-semibold">University of St Andrews</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">BSc (Hons) Computer Science, 2015 – 2019</p>
-          <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300 text-sm">
-            <li>Graduated with First Class Honours</li>
-            <li>Relevant modules: Software Engineering, Databases, Artificial Intelligence, Algorithms</li>
-            <li>Dissertation: "Automated Podcast Recommendation System"</li>
-          </ul>
+        <div class="p-4 rounded-lg bg-white/60 dark:bg-gray-800/60 shadow-sm flex items-start gap-4">
+          <!-- University Icon -->
+          <svg class="h-8 w-8 text-blue-700 dark:text-blue-300 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-width="2" d="M12 3L2 9l10 6 10-6-10-6zm0 13v5m-6-5v2a2 2 0 002 2h8a2 2 0 002-2v-2" />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold">University of St Andrews</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">BSc (Hons) Computer Science, 2015 – 2019</p>
+            <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300 text-sm">
+              <li>Graduated with First Class Honours</li>
+              <li>Relevant modules: Software Engineering, Databases, Artificial Intelligence, Algorithms</li>
+              <li>Dissertation: "Automated Podcast Recommendation System"</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -264,15 +390,33 @@
       </h2>
       <div x-show="showProjects" x-transition class="space-y-4">
         <a href="https://github.com/sbsyme/podcast-social-platform" target="_blank" rel="noopener"
-          class="block p-4 rounded-lg bg-white/60 dark:bg-gray-800/60 shadow-sm hover:bg-blue-100 dark:hover:bg-blue-900/40 transition cursor-pointer group">
-          <h3 class="text-xl font-semibold group-hover:underline">Podcast Social Platform</h3>
-          <p>A podcast discovery platform similar to Letterboxd. Built using Java microservices and Docker.</p>
+          class="block p-4 rounded-lg bg-white/60 dark:bg-gray-800/60 shadow-sm hover:bg-blue-100 dark:hover:bg-blue-900/40 transition cursor-pointer group flex items-start gap-4">
+          <!-- Podcast Social Platform Icon -->
+          <svg class="h-8 w-8 text-purple-500 dark:text-purple-300 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" stroke-width="2" />
+            <path stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path stroke-width="2" d="M19.5 12a7.5 7.5 0 10-15 0" />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold group-hover:underline">Podcast Social Platform</h3>
+            <p>A podcast discovery platform similar to Letterboxd. Built using Java microservices and Docker.</p>
+          </div>
         </a>
         <a href="https://github.com/sbsyme/meal-planner-ai" target="_blank" rel="noopener"
-          class="block p-4 rounded-lg bg-white/60 dark:bg-gray-800/60 shadow-sm hover:bg-blue-100 dark:hover:bg-blue-900/40 transition cursor-pointer group">
-          <h3 class="text-xl font-semibold group-hover:underline">Meal Planner AI</h3>
-          <p>A web application that builds a customised weekly meal plan based on user specifications. Built using
-            Next.js and OpenAI API.</p>
+          class="block p-4 rounded-lg bg-white/60 dark:bg-gray-800/60 shadow-sm hover:bg-blue-100 dark:hover:bg-blue-900/40 transition cursor-pointer group flex items-start gap-4">
+          <!-- Meal Planner AI Icon -->
+          <svg class="h-8 w-8 text-green-500 dark:text-green-300 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <rect x="4" y="4" width="16" height="16" rx="4" stroke-width="2" />
+            <path stroke-width="2" d="M8 8h8v8H8z" />
+            <path stroke-width="2" d="M12 12h.01" />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold group-hover:underline">Meal Planner AI</h3>
+            <p>A web application that builds a customised weekly meal plan based on user specifications. Built using
+              Next.js and OpenAI API.</p>
+          </div>
         </a>
       </div>
     </section>
