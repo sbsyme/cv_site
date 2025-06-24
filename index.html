@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ darkMode: true }" :class="{ 'dark': darkMode }">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My CV</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {}
+      }
+    };
+  </script>
+</head>
+
+<body
+  class="bg-gradient-to-br from-gray-100 via-blue-100 to-gray-300 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-gray-900 dark:text-gray-100 font-sans leading-relaxed min-h-screen">
+  <div class="max-w-5xl mx-auto p-6 space-y-12">
+
+    <!-- Name and Occupation with animated underline -->
+    <section class="text-center mb-6">
+      <h1 class="text-5xl font-extrabold mb-2 relative inline-block">
+        Scott Syme
+        <span class="block h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mt-2 animate-pulse"></span>
+      </h1>
+      <h2 class="text-xl font-medium text-blue-700 dark:text-blue-300 italic animate-fade-in-down">Software Engineer
+      </h2>
+    </section>
+
+    <!-- Profile Picture with hover effect -->
+    <div class="flex justify-center">
+      <div class="relative group">
+        <img src="image.png" alt="Profile picture"
+          class="w-56 h-56 rounded-full border-4 border-blue-300 dark:border-blue-700 shadow-2xl object-cover mb-4 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-blue-400/50">
+        <div
+          class="absolute inset-0 rounded-full bg-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        </div>
+      </div>
+    </div>
+
+    <!-- Links Section -->
+    <div class="flex justify-center mb-8">
+      <div class="flex gap-4">
+        <a href="mailto:sbsyme@gmail.com" target="_blank" rel="noopener"
+          class="flex items-center gap-1 px-3 py-2 rounded-full bg-white/70 dark:bg-gray-800/70 shadow hover:bg-blue-100 dark:hover:bg-blue-900/40 transition">
+          <svg class="h-5 w-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-width="2"
+              d="M16 12l-4-4-4 4m8 0v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6m16 0V6a2 2 0 00-2-2H6a2 2 0 00-2 2v6" />
+          </svg>
+          Email
+        </a>
+        <a href="https://github.com/sbsyme" target="_blank" rel="noopener"
+          class="flex items-center gap-1 px-3 py-2 rounded-full bg-white/70 dark:bg-gray-800/70 shadow hover:bg-blue-100 dark:hover:bg-blue-900/40 transition">
+          <svg class="h-5 w-5 text-gray-800 dark:text-gray-100" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.029-2.687-.103-.254-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.338 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.396.1 2.65.64.7 1.028 1.594 1.028 2.687 0 3.847-2.338 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .267.18.577.688.479C19.138 20.2 22 16.448 22 12.021 22 6.484 17.523 2 12 2z" />
+          </svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/scott-brian-syme/" target="_blank" rel="noopener"
+          class="flex items-center gap-1 px-3 py-2 rounded-full bg-white/70 dark:bg-gray-800/70 shadow hover:bg-blue-100 dark:hover:bg-blue-900/40 transition">
+          <svg class="h-5 w-5 text-blue-700 dark:text-blue-300" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.845-1.563 3.043 0 3.604 2.003 3.604 4.605v5.591z" />
+          </svg>
+          LinkedIn
+        </a>
+        <a href="https://medium.com/@sbsyme" target="_blank" rel="noopener"
+          class="flex items-center gap-1 px-3 py-2 rounded-full bg-white/70 dark:bg-gray-800/70 shadow hover:bg-green-100 dark:hover:bg-green-900/40 transition">
+          <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 24 24">
+            <g>
+              <ellipse cx="5.5" cy="12" rx="4.5" ry="7" />
+              <ellipse cx="17" cy="12" rx="2" ry="7" />
+              <ellipse cx="22" cy="12" rx="1" ry="7" />
+            </g>
+          </svg>
+          Medium
+          <!-- </a>
+        <a href="CV.pdf" download
+          class="flex items-center gap-1 px-3 py-2 rounded-full bg-white/70 dark:bg-gray-800/70 shadow hover:bg-purple-100 dark:hover:bg-purple-900/40 transition">
+          <svg class="h-5 w-5 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-width="2"
+              d="M12 16v-8m0 8l-4-4m4 4l4-4M4 20h16a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          Download CV
+        </a> -->
+      </div>
+    </div>
+
+    <!-- Toggle with icon -->
+    <div class="flex justify-end">
+      <button @click="darkMode = !darkMode"
+        class="flex items-center gap-2 bg-gray-200 dark:bg-gray-800 text-sm px-4 py-2 rounded shadow transition-colors duration-200 hover:bg-blue-200 dark:hover:bg-blue-900">
+        <svg x-show="!darkMode" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <circle cx="12" cy="12" r="5" stroke-width="2" />
+          <path stroke-width="2"
+            d="M12 1v2m0 18v2m11-11h-2M3 12H1m16.95 7.07l-1.41-1.41M6.34 6.34L4.93 4.93m12.02 0l-1.41 1.41M6.34 17.66l-1.41 1.41" />
+        </svg>
+        <svg x-show="darkMode" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-300" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-width="2" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
+        </svg>
+        <span x-text="darkMode ? 'Light Mode' : 'Dark Mode'"></span>
+      </button>
+    </div>
+
+    <!-- About Me with collapsible -->
+    <section x-data="{ open: true }" class="transition-all duration-300">
+      <h2 class="text-3xl font-bold border-b pb-2 mb-4 flex items-center justify-between cursor-pointer select-none"
+        @click="open = !open">
+        About Me
+        <svg :class="{'rotate-180': open}" class="h-5 w-5 ml-2 transition-transform duration-300" fill="none"
+          stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </h2>
+      <div x-show="open" x-transition>
+        <p>
+          As an Engineer I at American Express, I apply my strong programming, problem solving, and analytical skills to
+          design, develop, and test software solutions for various business needs and challenges. I have nearly 5 years
+          of
+          experience in the industry, with a focus on Java, Object-Oriented Programming (OOP), and Behavior-Driven
+          Development (BDD) methodologies. I'm passionate about learning new tools and frameworks, and collaborating
+          with
+          other engineers and stakeholders to deliver high-quality products.
+        </p>
+      </div>
+    </section>
+
+    <!-- Employment History with hover highlight -->
+    <section>
+      <h2 class="text-3xl font-bold border-b pb-2 mb-4">Employment History</h2>
+      <div class="space-y-4">
+        <template x-for="(job, idx) in [
+          {title:'Engineer I — American Express', date:'May 2021 – Present', desc:'Design, develop, and test software solutions addressing complex business challenges, primarily using Java, OOP, and BDD methodologies.'},
+          {title:'Technology Graduate Engineer — American Express', date:'Sep 2019 – May 2021', desc:'Rotational engineering program working on diverse software engineering projects across the business.'},
+          {title:'Visitor Centre Assistant — Cream o\' Galloway', date:'Jun 2019 – Aug 2019', desc:'Provided customer support and operational assistance at a local food attraction.'},
+          {title:'Cabin Counsellor — Camp Highlander', date:'Jun 2018 – Aug 2018', desc:'Supervised and mentored a group of boys aged 10–13 through daily camp activities and routines.'},
+          {title:'Food and Beverage Assistant — Macdonald Hotels & Resorts', date:'Oct 2017 – Feb 2018', desc:'Served food and beverages at the Rocca Restaurant in St Andrews.'},
+          {title:'First Foundry Analyst (Intern) — American Express', date:'Jun 2017 – Aug 2017', desc:'Technology intern at American Express, working in a cross-functional team on engineering tasks.'},
+          {title:'Customer Service Assistant — Wilko', date:'Oct 2014 – Aug 2016', desc:'Assisted customers and managed retail duties at a local store.'}
+        ]" :key="idx">
+          <div
+            class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm">
+            <h3 class="text-xl font-semibold" x-text="job.title"></h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400" x-text="job.date"></p>
+            <p x-text="job.desc"></p>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- Skills with animated badges -->
+    <section>
+      <h2 class="text-3xl font-bold border-b pb-2 mb-4">Skills</h2>
+      <div class="flex flex-wrap gap-2">
+        <span
+          class="bg-blue-200 dark:bg-blue-700 text-blue-900 dark:text-blue-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">Java
+          (OCP SE 11 Certified)</span>
+        <span
+          class="bg-purple-200 dark:bg-purple-700 text-purple-900 dark:text-purple-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">Microservices
+          Architecture</span>
+        <span
+          class="bg-green-200 dark:bg-green-700 text-green-900 dark:text-green-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">Spring
+          Framework</span>
+        <span
+          class="bg-yellow-200 dark:bg-yellow-700 text-yellow-900 dark:text-yellow-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">BDD
+          (Cucumber)</span>
+        <span
+          class="bg-pink-200 dark:bg-pink-700 text-pink-900 dark:text-pink-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">SQL
+          (PostgreSQL, Cassandra)</span>
+        <span
+          class="bg-indigo-200 dark:bg-indigo-700 text-indigo-900 dark:text-indigo-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">NoSQL
+          (MongoDB)</span>
+        <span
+          class="bg-blue-300 dark:bg-blue-800 text-blue-900 dark:text-blue-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">Cloud
+          Computing (AWS)</span>
+        <span
+          class="bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">CI/CD
+          (Jenkins, GitHub Actions)</span>
+        <span
+          class="bg-red-200 dark:bg-red-700 text-red-900 dark:text-red-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">Frontend
+          (HTML, CSS, JS)</span>
+        <span
+          class="bg-teal-200 dark:bg-teal-700 text-teal-900 dark:text-teal-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">React,
+          Next.js</span>
+        <span
+          class="bg-orange-200 dark:bg-orange-700 text-orange-900 dark:text-orange-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">Testing
+          (JUnit, Mockito)</span>
+        <span
+          class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">Git</span>
+        <span
+          class="bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">Docker</span>
+        <span
+          class="bg-green-100 dark:bg-green-900 text-green-900 dark:text-green-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">Agile
+          (Scrum, Kanban)</span>
+        <span
+          class="bg-purple-100 dark:bg-purple-900 text-purple-900 dark:text-purple-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">REST
+          APIs</span>
+        <span
+          class="bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 px-3 py-1 rounded-full text-sm font-medium animate-fade-in">Kubernetes</span>
+
+      </div>
+    </section>
+
+    <!-- Certifications with icons -->
+    <section>
+      <h2 class="text-3xl font-bold border-b pb-2 mb-4">Certifications</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <a href="https://www.credly.com/badges/1b711aba-14b0-4b00-ba1f-3229af81aa2c?source=linked_in_profile"
+          target="_blank" rel="noopener"
+          class="flex items-center gap-4 p-4 rounded-lg bg-white/70 dark:bg-gray-800/70 shadow hover:bg-orange-100 dark:hover:bg-orange-900/40 transition group">
+          <div class="flex-shrink-0">
+            <svg class="h-10 w-10 text-orange-500 group-hover:scale-110 transition-transform" fill="currentColor"
+              viewBox="0 0 20 20">
+              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-1h2v1zm0-2H9V7h2v4z" />
+            </svg>
+          </div>
+          <div>
+            <div class="font-semibold text-lg">Oracle Certified Professional</div>
+            <div class="text-sm text-gray-600 dark:text-gray-400">Java SE 11 Developer</div>
+          </div>
+        </a>
+        <a href="https://www.credly.com/badges/ae47a072-1dd4-441c-a684-4add9581cb2e/linked_in_profile" target="_blank"
+          rel="noopener"
+          class="flex items-center gap-4 p-4 rounded-lg bg-white/70 dark:bg-gray-800/70 shadow hover:bg-blue-100 dark:hover:bg-blue-900/40 transition group">
+          <div class="flex-shrink-0">
+            <svg class="h-10 w-10 text-blue-500 group-hover:scale-110 transition-transform" fill="currentColor"
+              viewBox="0 0 20 20">
+              <path
+                d="M2.003 9.25C3.153 5.753 6.388 3 10 3c3.612 0 6.847 2.753 7.997 6.25a.75.75 0 010 .5C16.847 14.247 13.612 17 10 17c-3.612 0-6.847-2.753-7.997-6.25a.75.75 0 010-.5zM10 15a5 5 0 100-10 5 5 0 000 10z" />
+            </svg>
+          </div>
+          <div>
+            <div class="font-semibold text-lg">AWS Certified Cloud Practitioner</div>
+            <div class="text-sm text-gray-600 dark:text-gray-400">Amazon Web Services</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section>
+      <h2 class="text-3xl font-bold border-b pb-2 mb-4">Education</h2>
+      <div class="space-y-4">
+        <div class="p-4 rounded-lg bg-white/60 dark:bg-gray-800/60 shadow-sm">
+          <h3 class="text-xl font-semibold">University of St Andrews</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">BSc (Hons) Computer Science, 2015 – 2019</p>
+          <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300 text-sm">
+            <li>Graduated with First Class Honours</li>
+            <li>Relevant modules: Software Engineering, Databases, Artificial Intelligence, Algorithms</li>
+            <li>Dissertation: "Automated Podcast Recommendation System"</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Projects with expand/collapse -->
+    <section x-data="{ showProjects: true }">
+      <h2 class="text-3xl font-bold border-b pb-2 mb-4 flex items-center justify-between cursor-pointer select-none"
+        @click="showProjects = !showProjects">
+        Personal Projects
+        <svg :class="{'rotate-180': showProjects}" class="h-5 w-5 ml-2 transition-transform duration-300" fill="none"
+          stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </h2>
+      <div x-show="showProjects" x-transition class="space-y-4">
+        <a href="https://github.com/sbsyme/podcast-social-platform" target="_blank" rel="noopener"
+          class="block p-4 rounded-lg bg-white/60 dark:bg-gray-800/60 shadow-sm hover:bg-blue-100 dark:hover:bg-blue-900/40 transition cursor-pointer group">
+          <h3 class="text-xl font-semibold group-hover:underline">Podcast Social Platform</h3>
+          <p>A podcast discovery platform similar to Letterboxd. Built using Java microservices and Docker.</p>
+        </a>
+        <a href="https://github.com/sbsyme/meal-planner-ai" target="_blank" rel="noopener"
+          class="block p-4 rounded-lg bg-white/60 dark:bg-gray-800/60 shadow-sm hover:bg-blue-100 dark:hover:bg-blue-900/40 transition cursor-pointer group">
+          <h3 class="text-xl font-semibold group-hover:underline">Meal Planner AI</h3>
+          <p>A web application that builds a customised weekly meal plan based on user specifications. Built using
+            Next.js and OpenAI API.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Medium Blog Posts Section -->
+    <section class="mt-12">
+      <h2 class="text-3xl font-bold border-b pb-2 mb-4 flex items-center gap-2">
+        <svg class="h-7 w-7 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 24 24">
+          <g>
+            <ellipse cx="5.5" cy="12" rx="4.5" ry="7" />
+            <ellipse cx="17" cy="12" rx="2" ry="7" />
+            <ellipse cx="22" cy="12" rx="1" ry="7" />
+          </g>
+        </svg>
+        Blog
+      </h2>
+      <div class="space-y-4">
+        <a href="https://medium.com/@sbsyme/building-an-ai-meal-planner-with-next-js-openai-api-auth0-and-mongodb-ce87a257b2d2"
+          target="_blank" rel="noopener"
+          class="block p-4 rounded-lg bg-white/60 dark:bg-gray-800/60 shadow-sm hover:bg-green-100 dark:hover:bg-green-900/40 transition group">
+          <h3 class="text-lg font-semibold group-hover:underline">Building a Full-Stack Meal Planner Application with
+            Next.js, OpenAI API, Auth0 and MongoDB.</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">How I created a meal planning app powered by AI and modern
+            web technologies.</p>
+        </a>
+        <!-- Add more blog post links as needed -->
+      </div>
+      <div class="mt-4 text-center">
+        <a href="https://medium.com/@sbsyme" target="_blank" rel="noopener"
+          class="inline-flex items-center gap-1 text-green-700 dark:text-green-400 hover:underline font-medium">
+          See all posts on Medium
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </div>
+  <footer class="mt-12 py-6 bg-white/70 dark:bg-gray-800/70 text-center text-gray-600 dark:text-gray-400 shadow-inner">
+    <div class="flex flex-col items-center gap-2">
+      <span>&copy; 2025 Scott Syme. All rights reserved.</span>
+      <span>
+        Built with
+        <a href="https://tailwindcss.com/" target="_blank" rel="noopener" class="text-blue-500 hover:underline">Tailwind
+          CSS</a>
+        &amp;
+        <a href="https://alpinejs.dev/" target="_blank" rel="noopener"
+          class="text-blue-500 hover:underline">Alpine.js</a>
+      </span>
+    </div>
+  </footer>
+  <!-- Simple fade-in animation for badges and headings -->
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    .animate-slide-in {
+      animation: slideIn 0.6s ease-out forwards;
+    }
+
+    .animate-pulse {
+      animation: pulse 2s infinite;
+    }
+  </style>
+</body>
+
+</html>
