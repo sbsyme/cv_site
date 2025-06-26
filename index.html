@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scott Syme | Software Engineer</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%233b82f6'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='Arial'%3ESS%3C/text%3E%3C/svg%3E">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -163,104 +165,141 @@
     <!-- Employment History with hover highlight and icons -->
     <section>
       <h2 class="text-3xl font-bold border-b pb-2 mb-4">Employment History</h2>
-      <div class="space-y-4">
-        <div
-          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
-          <!-- American Express Icon -->
-          <svg class="h-8 w-8 text-blue-500 dark:text-blue-300 mt-1 flex-shrink-0" fill="currentColor"
-            viewBox="0 0 24 24">
-            <rect x="3" y="5" width="18" height="14" rx="3" />
-            <text x="12" y="16" text-anchor="middle" font-size="8" fill="white" font-family="Arial">AMEX</text>
-          </svg>
-          <div>
-            <h3 class="text-xl font-semibold">Engineer I — American Express</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">May 2021 – Present</p>
-            <p>Design, develop, and test software solutions addressing complex business challenges, primarily using
-              Java, OOP, and BDD methodologies.</p>
+      <div class="space-y-8">
+        <!-- Professional Experience -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-blue-700 dark:text-blue-300">Professional Experience</h3>
+          <div class="space-y-4">
+            <div
+              class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+              <!-- American Express Icon -->
+              <svg class="h-8 w-8 text-blue-500 dark:text-blue-300 mt-1 flex-shrink-0" fill="currentColor"
+                viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="3" />
+                <text x="12" y="16" text-anchor="middle" font-size="8" fill="white" font-family="Arial">AMEX</text>
+              </svg>
+              <div>
+                <h3 class="text-xl font-semibold">Engineer I — American Express</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">May 2021 – Present</p>
+                <p class="text-sm text-gray-500 dark:text-gray-300 italic">London, UK (Remote)</p>
+                <p>Engineer in the Accounts Receivable team, responsible for developing and supporting Java
+                  microservices using Spring WebFlux. Built reactive backend components for financial operations and
+                  collaborated with cross-functional teams to implement scalable solutions. Contributed to a robust
+                  testing framework using Cucumber, JUnit, and Mockito.</p>
+              </div>
+            </div>
+            <div
+              class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+              <!-- American Express Icon -->
+              <svg class="h-8 w-8 text-blue-500 dark:text-blue-300 mt-1 flex-shrink-0" fill="currentColor"
+                viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="3" />
+                <text x="12" y="16" text-anchor="middle" font-size="8" fill="white" font-family="Arial">AMEX</text>
+              </svg>
+              <div>
+                <h3 class="text-xl font-semibold">Technology Graduate Engineer — American Express</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Sep 2019 – May 2021</p>
+                <p class="text-sm text-gray-500 dark:text-gray-300 italic">Burgess Hill, UK (Hybrid)</p>
+                <p>Completed rotations in three teams:
+                <ul style="list-style-type:circle" class="list-inside mt-2 text-gray-700 dark:text-gray-300 ml-4">
+                  <li>Accounts Receivable – Developed microservices using Java and Spring WebFlux.</li>
+                  <li>Security Engineering – Built a test automation tool to improve the security scanning process
+                    across engineering teams.</li>
+                  <li>Full-Stack Development – Worked on a platform with a React.js frontend and microservice backend,
+                    gaining hands-on experience with RESTful service integration and front-to-back coordination.</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+              <!-- American Express Icon -->
+              <svg class="h-8 w-8 text-blue-500 dark:text-blue-300 mt-1 flex-shrink-0" fill="currentColor"
+                viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="3" />
+                <text x="12" y="16" text-anchor="middle" font-size="8" fill="white" font-family="Arial">AMEX</text>
+              </svg>
+              <div>
+                <h3 class="text-xl font-semibold">First Foundry Analyst (Intern) — American Express</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Jun 2017 – Aug 2017</p>
+                <p class="text-sm text-gray-500 dark:text-gray-300 italic">Burgess Hill, UK</p>
+                <p>Interned in the Travel and Lifestyle Services team. Tasked with researching the business viability of
+                  blockchain technology for a real-world use case. Delivered a proof-of-concept and presented findings
+                  to stakeholders, exploring integration scenarios and limitations of distributed ledger systems..</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div
-          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
-          <!-- American Express Icon -->
-          <svg class="h-8 w-8 text-blue-500 dark:text-blue-300 mt-1 flex-shrink-0" fill="currentColor"
-            viewBox="0 0 24 24">
-            <rect x="3" y="5" width="18" height="14" rx="3" />
-            <text x="12" y="16" text-anchor="middle" font-size="8" fill="white" font-family="Arial">AMEX</text>
-          </svg>
-          <div>
-            <h3 class="text-xl font-semibold">Technology Graduate Engineer — American Express</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Sep 2019 – May 2021</p>
-            <p>Rotational engineering program working on diverse software engineering projects across the business.</p>
-          </div>
-        </div>
-        <div
-          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
-          <!-- Cream o' Galloway Icon -->
-          <svg class="h-8 w-8 text-yellow-600 dark:text-yellow-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
-            viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10" stroke-width="2" />
-            <path stroke-width="2" d="M8 15c1.333-2 6.667-2 8 0" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-semibold">Visitor Centre Assistant — Cream o' Galloway</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Jun 2019 – Aug 2019</p>
-            <p>Provided customer support and operational assistance at a local food attraction.</p>
-          </div>
-        </div>
-        <div
-          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
-          <!-- Camp Icon -->
-          <svg class="h-8 w-8 text-green-700 dark:text-green-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
-            viewBox="0 0 24 24">
-            <path stroke-width="2" d="M3 17l9-13 9 13H3z" />
-            <rect x="9" y="17" width="6" height="4" rx="1" fill="currentColor" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-semibold">Cabin Counsellor — Camp Highlander</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Jun 2018 – Aug 2018</p>
-            <p>Supervised and mentored a group of boys aged 10–13 through daily camp activities and routines.</p>
-          </div>
-        </div>
-        <div
-          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
-          <!-- Hotel Icon -->
-          <svg class="h-8 w-8 text-pink-600 dark:text-pink-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
-            viewBox="0 0 24 24">
-            <rect x="4" y="8" width="16" height="10" rx="2" stroke-width="2" />
-            <rect x="9" y="12" width="6" height="6" rx="1" fill="currentColor" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-semibold">Food and Beverage Assistant — Macdonald Hotels & Resorts</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Oct 2017 – Feb 2018</p>
-            <p>Served food and beverages at the Rocca Restaurant in St Andrews.</p>
-          </div>
-        </div>
-        <div
-          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
-          <!-- American Express Icon -->
-          <svg class="h-8 w-8 text-blue-500 dark:text-blue-300 mt-1 flex-shrink-0" fill="currentColor"
-            viewBox="0 0 24 24">
-            <rect x="3" y="5" width="18" height="14" rx="3" />
-            <text x="12" y="16" text-anchor="middle" font-size="8" fill="white" font-family="Arial">AMEX</text>
-          </svg>
-          <div>
-            <h3 class="text-xl font-semibold">First Foundry Analyst (Intern) — American Express</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Jun 2017 – Aug 2017</p>
-            <p>Technology intern at American Express, working in a cross-functional team on engineering tasks.</p>
-          </div>
-        </div>
-        <div
-          class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
-          <!-- Retail Icon -->
-          <svg class="h-8 w-8 text-gray-500 dark:text-gray-300 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
-            viewBox="0 0 24 24">
-            <rect x="4" y="7" width="16" height="10" rx="2" stroke-width="2" />
-            <path stroke-width="2" d="M9 17v2a1 1 0 001 1h4a1 1 0 001-1v-2" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-semibold">Customer Service Assistant — Wilko</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Oct 2014 – Aug 2016</p>
-            <p>Assisted customers and managed retail duties at a local store.</p>
+        <!-- Other Experience -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-blue-700 dark:text-blue-300">Other Experience</h3>
+          <div class="space-y-4">
+            <div
+              class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+              <!-- Cream o' Galloway Icon -->
+              <svg class="h-8 w-8 text-yellow-600 dark:text-yellow-400 mt-1 flex-shrink-0" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" stroke-width="2" />
+                <path stroke-width="2" d="M8 15c1.333-2 6.667-2 8 0" />
+              </svg>
+              <div>
+                <h3 class="text-xl font-semibold">Visitor Centre Assistant — Cream o' Galloway</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Jun 2019 – Aug 2019</p>
+                <p class="text-sm text-gray-500 dark:text-gray-300 italic">Gatehouse of Fleet, UK</p>
+                <p>Provided customer support and operational assistance at a local food attraction.</p>
+              </div>
+            </div>
+            <div
+              class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+              <!-- Camp Icon -->
+              <svg class="h-8 w-8 text-green-700 dark:text-green-400 mt-1 flex-shrink-0" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-width="2" d="M3 17l9-13 9 13H3z" />
+                <rect x="9" y="17" width="6" height="4" rx="1" fill="currentColor" />
+              </svg>
+              <div>
+                <h3 class="text-xl font-semibold">Cabin Counsellor — Camp Highlander</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Jun 2018 – Aug 2018</p>
+                <p class="text-sm text-gray-500 dark:text-gray-300 italic">Mills River, North Carolina, USA</p>
+                <p>Took part in an American summer camp programme, supervising and mentoring a group of boys aged 10–13
+                  at a residential camp in North Carolina. The role fostered adaptability, leadership, and emotional
+                  intelligence through continuous responsibility for camper welfare and engagement.
+                </p>
+              </div>
+            </div>
+            <div
+              class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+              <!-- Hotel Icon -->
+              <svg class="h-8 w-8 text-pink-600 dark:text-pink-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <rect x="4" y="8" width="16" height="10" rx="2" stroke-width="2" />
+                <rect x="9" y="12" width="6" height="6" rx="1" fill="currentColor" />
+              </svg>
+              <div>
+                <h3 class="text-xl font-semibold">Food and Beverage Assistant — Macdonald Hotels & Resorts</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Oct 2017 – Feb 2018</p>
+                <p class="text-sm text-gray-500 dark:text-gray-300 italic">St Andrews, UK</p>
+                <p>Provided table service in a formal dining setting at Rocca Restaurant in St Andrews. Maintained
+                  professionalism under pressure, with a focus on attention to detail and high-quality customer service.
+                </p>
+              </div>
+            </div>
+            <div
+              class="p-4 rounded-lg transition bg-white/60 dark:bg-gray-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40 shadow-sm flex items-start gap-4">
+              <!-- Retail Icon -->
+              <svg class="h-8 w-8 text-gray-500 dark:text-gray-300 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <rect x="4" y="7" width="16" height="10" rx="2" stroke-width="2" />
+                <path stroke-width="2" d="M9 17v2a1 1 0 001 1h4a1 1 0 001-1v-2" />
+              </svg>
+              <div>
+                <h3 class="text-xl font-semibold">Customer Service Assistant — Wilko</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Oct 2014 – Aug 2016</p>
+                <p class="text-sm text-gray-500 dark:text-gray-300 italic">Castle Douglas, UK</p>
+                <p>Supported customers on the shop floor, operated tills, and managed stock in a busy retail
+                  environment. This role helped develop strong communication and time management skills while working
+                  effectively as part of a team.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -369,9 +408,12 @@
             <h3 class="text-xl font-semibold">University of St Andrews</h3>
             <p class="text-sm text-gray-600 dark:text-gray-400">BSc (Hons) Computer Science, 2015 – 2019</p>
             <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300 text-sm">
-              <li>Graduated with First Class Honours</li>
-              <li>Relevant modules: Software Engineering, Databases, Artificial Intelligence, Algorithms</li>
-              <li>Dissertation: "Automated Podcast Recommendation System"</li>
+              <li>Graduated with 2:1</li>
+              <li>Relevant modules: Software Engineering, Databases, Operating Systems, Object-Oriented Programming, The
+                Internet and the Web, Data
+                Communications and Networks, Human-Computer Interaction, Video Games, Computer Systems, Distributed
+                Systems.</li>
+              <li>Dissertation: "MIDI Controller Envelope Editor"</li>
             </ul>
           </div>
         </div>
